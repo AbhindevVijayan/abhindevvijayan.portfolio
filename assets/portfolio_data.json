@@ -1,0 +1,135 @@
+{
+    "hero": {
+        "badgeText": "Available for Opportunities",
+        "title": "Code. Strategy.<br><span class=\"gradient-text\">Governance.</span>",
+        "description": "Hello! I'm Abhindev Vijayan, an MCA graduate and software developer. I bridge the gaps between clean system architecture, strategic data play, and digital policy compliance.",
+        "phrases": [
+            "am an MCA Graduate & Software Developer.",
+            "apply Cricket Strategy to build agile code.",
+            "love researching Civic Politics & Tech Law.",
+            "build secure, scalable, compliant systems."
+        ]
+    },
+    "about": {
+        "pillars": [
+            {
+                "id": "tech",
+                "icon": "code-2",
+                "title": "The Tech Architect",
+                "subtitle": "MCA Graduate & Software Developer",
+                "description": "With a solid academic foundation in Master of Computer Applications (MCA), I design robust, reliable, and scalable web solutions. I love translating intricate algorithms and database normalization patterns into efficient, readable code.",
+                "tags": ["Clean Code", "DB Architecture", "Problem Solving"]
+            },
+            {
+                "id": "cricket",
+                "icon": "activity",
+                "title": "The Cricket Strategist",
+                "subtitle": "Sports Analyser & Team Player",
+                "description": "Cricket is more than a sport to me—it is a lesson in high-performance strategy. I apply cricketing principles like team synergy, adaptive playing strategies under pressure, and rich historical data analysis to navigate agile software sprints.",
+                "tags": ["Agile Synergy", "Data Analytics", "Sprint Adaptability"]
+            },
+            {
+                "id": "law",
+                "icon": "scale",
+                "title": "The Civic Thinker",
+                "subtitle": "Politics & Tech Law Devotee",
+                "description": "Fascinated by administrative policies, legal frameworks, and digital governance. I believe software developers must understand compliance, licensing, and user privacy rights (GDPR/IPR) to construct technologies that truly support democratic societies.",
+                "tags": ["Digital Rights", "IPR & Licensing", "Policy Compliance"]
+            }
+        ]
+    },
+    "skills": {
+        "tech": [
+            { "name": "JavaScript (ES6+) / TypeScript", "percentage": 90 },
+            { "name": "React.js & Next.js", "percentage": 85 },
+            { "name": "Node.js / Express", "percentage": 80 },
+            { "name": "Relational Databases (SQL / PostgreSQL)", "percentage": 85 },
+            { "name": "Java & Python (MCA Core)", "percentage": 75 },
+            { "name": "System Architecture & OOPs", "percentage": 80 }
+        ],
+        "strategy": [
+            { "name": "Agile Team Collaboration (Captaincy Mentality)", "percentage": 95 },
+            { "name": "Adaptive Strategy & Pressure Handling", "percentage": 90 },
+            { "name": "Data Analytics & Sports Visualisation", "percentage": 80 },
+            { "name": "Dynamic Resource Allocation", "percentage": 85 }
+        ],
+        "law": [
+            { "name": "GDPR, HIPAA & User Privacy Compliance", "percentage": 80 },
+            { "name": "Open Source Licensing & IPR Frameworks", "percentage": 85 },
+            { "name": "Digital Ethics & Algorithmic Fairness", "percentage": 75 },
+            { "name": "Policy Research & System Audit", "percentage": 70 }
+        ]
+    },
+    "services": [
+        {
+            "icon": "laptop",
+            "title": "Full-Stack Development",
+            "description": "Designing modern, responsive web applications with clean React/Next.js frontends and optimized Node.js rest APIs. Emphasis on performance and responsive UX."
+        },
+        {
+            "icon": "database",
+            "title": "System Design & DB Tuning",
+            "description": "Structuring relational databases (PostgreSQL/MySQL) with efficient indexes, normalized schemas, and custom triggers to guarantee high data integrity and lightning query speeds."
+        },
+        {
+            "icon": "bar-chart-3",
+            "title": "Sports Data & Analytics",
+            "description": "Building specialized performance visualizers and analytics engines. Perfect for cricket tournament modeling, player statistics analysis, and data-driven insights."
+        },
+        {
+            "icon": "shield-check",
+            "title": "Compliance & Policy Consulting",
+            "description": "Reviewing codebase architectures for privacy regulations compliance, choosing the correct open-source licenses, and auditing systems for digital law alignment."
+        }
+    ],
+    "projects": [
+        {
+            "id": "proj_1",
+            "title": "LegisCode",
+            "category": "Tech & Law",
+            "icon": "scale",
+            "tags": ["React", "Python", "NLP", "PostgreSQL"],
+            "sourceUrl": "https://github.com/abhindevvijayan/legiscode",
+            "liveUrl": "",
+            "description": "An intelligent search portal that indexes legal articles and guidelines on digital rights, making compliance simple for software developers."
+        },
+        {
+            "id": "proj_2",
+            "title": "CricStats Dashboard",
+            "category": "Tech & Sports",
+            "icon": "activity",
+            "tags": ["Node.js", "ChartJS", "Express", "TailwindCSS"],
+            "sourceUrl": "https://github.com/abhindevvijayan/cricstats",
+            "liveUrl": "",
+            "description": "An interactive data analytics system visualizing historical bowler economy rates, run-chase probabilities, and team dynamics during match points."
+        },
+        {
+            "id": "proj_3",
+            "title": "Civix Core",
+            "category": "Tech & Law",
+            "icon": "vote",
+            "tags": ["TypeScript", "Next.js", "MongoDB", "JWT"],
+            "sourceUrl": "https://github.com/abhindevvijayan/civix-core",
+            "liveUrl": "",
+            "description": "A secure, glassmorphic civic engagement portal where community members can participate in direct local policy polls and debate legislative proposals."
+        },
+        {
+            "id": "proj_4",
+            "title": "OmniTask Board",
+            "category": "Full-Stack Dev",
+            "icon": "laptop",
+            "tags": ["React", "Redux", "Node.js", "WebSockets"],
+            "sourceUrl": "https://github.com/abhindevvijayan/omnitask",
+            "liveUrl": "",
+            "description": "A full-stack collaborative project management utility featuring real-time kanban state synchronization, analytical reports, and dark themes."
+        }
+    ],
+    "contact": {
+        "email": "abhindev.vijayan@gmail.com",
+        "location": "Kerala, India",
+        "availability": "Full-time opportunities, Open to relocation",
+        "github": "https://github.com/abhindevvijayan",
+        "linkedin": "https://linkedin.com/in/abhindevvijayan",
+        "twitter": "https://twitter.com/abhindevvijayan"
+    }
+}

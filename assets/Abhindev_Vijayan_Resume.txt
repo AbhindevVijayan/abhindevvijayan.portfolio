@@ -1,0 +1,59 @@
+========================================================================
+                       ABHINDEV VIJAYAN
+========================================================================
+Email: abhindev.vijayan@gmail.com | Location: Kerala, India
+GitHub: github.com/abhindevvijayan | LinkedIn: linkedin.com/in/abhindevvijayan
+Twitter: twitter.com/abhindevvijayan
+
+------------------------------------------------------------------------
+PROFESSIONAL SUMMARY
+------------------------------------------------------------------------
+Highly analytical MCA Graduate and Software Developer with an active interest
+in designing reliable, secure, and regulatory-compliant full-stack web applications.
+Brings a unique combination of technical engineering skillsets, analytical cricket
+sports tactics, and strong understanding of digital law and compliance frameworks.
+
+------------------------------------------------------------------------
+TECHNICAL CORE STACK
+------------------------------------------------------------------------
+* Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3, Java, Python, SQL
+* Frameworks/Libs: React.js, Next.js, Node.js, Express.js, Redux, TailwindCSS
+* Databases: PostgreSQL, MySQL, MongoDB
+* Protocols & Core Tech: Rest API, WebSockets, OOPs, Data Structures & Algorithms
+* Policy & Law: Open Source Licensing, GDPR Privacy Audits, Digital Security Standards
+
+------------------------------------------------------------------------
+PROJECTS & INNOVATIONS
+------------------------------------------------------------------------
+LEGISCODE | Tech & Law Search Portal
+* Designed and built an intelligent search engine indexing local statutes and guidelines
+  on digital compliance, user privacy, and cybersecurity laws.
+* Stack: React, Python, PostgreSQL, Natural Language Processing.
+
+CRICSTATS DASHBOARD | Cricket Strategy & Data Analytics
+* Engineered an interactive visualization dashboard presenting historic cricket bowler metrics,
+  run-chase forecasts, and statistical player performance models.
+* Stack: Node.js, Express, ChartJS, TailwindCSS.
+
+CIVIX CORE | Glassmorphic Civic Poll & Debating Platform
+* Engineered a secure portal that enables users to debate local policy proposals
+  and cast votes in transparent civic consensus polls.
+* Stack: TypeScript, Next.js, MongoDB, JWT Authentication.
+
+OMNITASK BOARD | Full-Stack Collaborative Task Board
+* Built a team management tool with real-time kanban state synchronization and visual boards.
+* Stack: React, Redux, Node.js, WebSockets.
+
+------------------------------------------------------------------------
+EDUCATION
+------------------------------------------------------------------------
+MASTER OF COMPUTER APPLICATIONS (MCA)
+* Focus on Software Engineering, Advanced Database Management, Object Oriented Programming,
+  Data Structures and Algorithmic Analysis.
+
+------------------------------------------------------------------------
+HOBBIES & CORE INTERESTS
+------------------------------------------------------------------------
+* Cricket: In-depth matches analytics, team captaincy strategy, game theory, and data play.
+* Politics & Law: Constitutional principles, administrative policies, digital law, privacy, and ethics.
+========================================================================

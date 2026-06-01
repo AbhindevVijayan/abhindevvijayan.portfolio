@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhindev Vijayan | Software Developer & MCA Graduate</title>
+    <meta name="description" content="Portfolio of Abhindev Vijayan, an MCA graduate and software developer passionate about building scalable tech, strategic cricket analysis, and civic tech policy.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">A</span>bhindev<span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#feedback" class="nav-link">Feedback</a>
+                <a href="#contact" class="nav-link contact-btn-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-container">
+                        <span class="pulse-badge"></span>
+                        <span class="badge-text">Available for Opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Code. Strategy.<br>
+                        <span class="gradient-text">Governance.</span>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter-prefix">I </span>
+                        <span id="typewriter-text" class="typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Hello! I'm <strong>Abhindev Vijayan</strong>, an MCA graduate and software developer. I bridge the gaps between clean system architecture, strategic data play, and digital policy compliance.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore My Work</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Let's Connect</span>
+                        </a>
+                        <a href="assets/Abhindev_Vijayan_Resume.txt" download="Abhindev_Vijayan_Resume.txt" class="btn btn-tertiary" id="downloadCvBtn">
+                            <i data-lucide="download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <div class="glow-ring glow-teal"></div>
+                        <div class="glow-ring glow-gold"></div>
+                        <img src="assets/developer_profile.png" alt="Abhindev Vijayan Conceptual Developer Avatar" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Who I Am</span>
+                    <h2 class="section-title">The Three Pillars of My Persona</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card tech-pillar">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3>The Tech Architect</h3>
+                        <p class="pillar-subtitle">MCA Graduate & Software Developer</p>
+                        <p class="pillar-text">
+                            With a solid academic foundation in Master of Computer Applications (MCA), I design robust, reliable, and scalable web solutions. I love translating intricate algorithms and database normalization patterns into efficient, readable code.
+                        </p>
+                        <div class="pillar-meta">
+                            <span class="tag">Clean Code</span>
+                            <span class="tag">DB Architecture</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card cricket-pillar">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3>The Cricket Strategist</h3>
+                        <p class="pillar-subtitle">Sports Analyser & Team Player</p>
+                        <p class="pillar-text">
+                            Cricket is more than a sport to me—it is a lesson in high-performance strategy. I apply cricketing principles like team synergy, adaptive playing strategies under pressure, and rich historical data analysis to navigate agile software sprints.
+                        </p>
+                        <div class="pillar-meta">
+                            <span class="tag">Agile Synergy</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Sprint Adaptability</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card law-pillar">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <h3>The Civic Thinker</h3>
+                        <p class="pillar-subtitle">Politics & Tech Law Devotee</p>
+                        <p class="pillar-text">
+                            Fascinated by administrative policies, legal frameworks, and digital governance. I believe software developers must understand compliance, licensing, and user privacy rights (GDPR/IPR) to construct technologies that truly support democratic societies.
+                        </p>
+                        <div class="pillar-meta">
+                            <span class="tag">Digital Rights</span>
+                            <span class="tag">IPR & Licensing</span>
+                            <span class="tag">Policy Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What I Do</span>
+                    <h2 class="section-title">My Skill Spectrum</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="skills-tabs-container">
+                    <div class="skills-tabs">
+                        <button class="tab-btn active" data-tab="tech">
+                            <i data-lucide="terminal"></i>
+                            <span>Core Tech Stack</span>
+                        </button>
+                        <button class="tab-btn" data-tab="strategy">
+                            <i data-lucide="users"></i>
+                            <span>Strategic & Team Play</span>
+                        </button>
+                        <button class="tab-btn" data-tab="law">
+                            <i data-lucide="book-open"></i>
+                            <span>Tech Law & Governance</span>
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content-wrapper">
+                        <!-- Tab 1: Tech Stack -->
+                        <div class="tab-content active" id="tech">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript (ES6+) / TypeScript</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React.js & Next.js</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Node.js / Express</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Relational Databases (SQL / PostgreSQL)</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Java & Python (MCA Core)</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">System Architecture & OOPs</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-teal" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tab 2: Agile & Cricket Strategy -->
+                        <div class="tab-content" id="strategy">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Agile Team Collaboration (Captaincy Mentality)</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-gold" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Adaptive Strategy & Pressure Handling</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-gold" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Data Analytics & Sports Visualisation</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-gold" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Dynamic Resource Allocation</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-gold" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tab 3: Tech Law & Policy -->
+                        <div class="tab-content" id="law">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">GDPR, HIPAA & User Privacy Compliance</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-law" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Open Source Licensing & IPR Frameworks</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-law" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Digital Ethics & Algorithmic Fairness</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-law" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Policy Research & System Audit</span>
+                                        <span class="skill-percentage">70%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill progress-law" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Offerings</span>
+                    <h2 class="section-title">Professional Services</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="laptop"></i>
+                        </div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Designing modern, responsive web applications with clean React/Next.js frontends and optimized Node.js rest APIs. Emphasis on performance and responsive UX.</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3>System Design & DB Tuning</h3>
+                        <p>Structuring relational databases (PostgreSQL/MySQL) with efficient indexes, normalized schemas, and custom triggers to guarantee high data integrity and lightning query speeds.</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3>Sports Data & Analytics</h3>
+                        <p>Building specialized performance visualizers and analytics engines. Perfect for cricket tournament modeling, player statistics analysis, and data-driven insights.</p>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Compliance & Policy Consulting</h3>
+                        <p>Reviewing codebase architectures for privacy regulations compliance, choosing the correct open-source licenses, and auditing systems for digital law alignment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My Creations</span>
+                    <h2 class="section-title">Highlighted Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Dynamic project cards will be generated by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback & Guestbook Section -->
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Endorsements</span>
+                    <h2 class="section-title">Community Guestbook & Feedback</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="feedback-layout">
+                    <!-- Feedback Form Card -->
+                    <div class="feedback-form-card">
+                        <h3>Leave Your Impression</h3>
+                        <p class="form-instruction">Have we worked together? Or do you share my love for code, cricket, or constitution? Let me know!</p>
+                        
+                        <form id="feedbackForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fbName">Full Name <span class="req">*</span></label>
+                                    <input type="text" id="fbName" required placeholder="John Doe">
+                                    <span class="error-msg" id="fbNameError">Name is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fbRole">Your Role / Affiliation <span class="req">*</span></label>
+                                    <select id="fbRole" required>
+                                        <option value="" disabled selected>Select a role...</option>
+                                        <option value="Recruiter">Recruiter / Employer</option>
+                                        <option value="Developer">Peer Developer</option>
+                                        <option value="Cricket Buff">Cricket Enthusiast</option>
+                                        <option value="Policy Advocate">Law/Policy Buff</option>
+                                        <option value="Friend">Other / Friend</option>
+                                    </select>
+                                    <span class="error-msg" id="fbRoleError">Please select your role</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Experience Rating <span class="req">*</span></label>
+                                <div class="star-rating" id="starRating">
+                                    <button type="button" class="star" data-rating="1" aria-label="1 star"><i data-lucide="star"></i></button>
+                                    <button type="button" class="star" data-rating="2" aria-label="2 stars"><i data-lucide="star"></i></button>
+                                    <button type="button" class="star" data-rating="3" aria-label="3 stars"><i data-lucide="star"></i></button>
+                                    <button type="button" class="star" data-rating="4" aria-label="4 stars"><i data-lucide="star"></i></button>
+                                    <button type="button" class="star" data-rating="5" aria-label="5 stars"><i data-lucide="star"></i></button>
+                                </div>
+                                <input type="hidden" id="fbRating" value="" required>
+                                <span class="error-msg" id="fbRatingError">Please select a rating</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fbMessage">Your Review / Message <span class="req">*</span></label>
+                                <textarea id="fbMessage" rows="4" required placeholder="Write your words here..."></textarea>
+                                <span class="error-msg" id="fbMessageError">Message cannot be empty</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span>Submit Feedback</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Feedback Display Panel -->
+                    <div class="feedback-display-panel">
+                        <div class="panel-header">
+                            <h3>Visitor Notes</h3>
+                            <div class="feedback-stats">
+                                <span class="stat-bubble"><strong id="feedbackCount">0</strong> Notes</span>
+                                <span class="stat-bubble"><strong id="feedbackAverage">0.0</strong> <i data-lucide="star" class="tiny-star"></i> Avg</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Scrollable Feed -->
+                        <div class="feedback-feed" id="feedbackFeed">
+                            <!-- Dynamic Content Inserted Here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Start a Conversation</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="contact-layout">
+                    <!-- Contact Information Details -->
+                    <div class="contact-info-panel">
+                        <div class="info-intro">
+                            <h3>Let's build something grand together.</h3>
+                            <p>Whether you're looking to hire an MCA-trained software developer, discuss cricket tactics, or analyze civic policies, my inbox is open.</p>
+                        </div>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Write to Me</span>
+                                    <a href="mailto:abhindev.vijayan@gmail.com">abhindev.vijayan@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Location</span>
+                                    <p>Kerala, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                                <div class="info-details">
+                                    <span>Availability</span>
+                                    <p>Full-time opportunities, Open to relocation</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links-container">
+                            <span>Follow Me:</span>
+                            <div class="social-links">
+                                <a href="https://github.com/abhindevvijayan" target="_blank" class="social-btn" aria-label="GitHub Profile">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/abhindevvijayan" target="_blank" class="social-btn" aria-label="LinkedIn Profile">
+                                    <i data-lucide="linkedin"></i>
+                                </a>
+                                <a href="https://twitter.com/abhindevvijayan" target="_blank" class="social-btn" aria-label="Twitter Profile">
+                                    <i data-lucide="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-card">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="cName">Your Name <span class="req">*</span></label>
+                                <input type="text" id="cName" required placeholder="Enter your name">
+                                <span class="error-msg" id="cNameError">Name is required</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cEmail">Your Email <span class="req">*</span></label>
+                                <input type="email" id="cEmail" required placeholder="name@example.com">
+                                <span class="error-msg" id="cEmailError">Please enter a valid email</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cSubject">Subject <span class="req">*</span></label>
+                                <input type="text" id="cSubject" required placeholder="How can I help you?">
+                                <span class="error-msg" id="cSubjectError">Subject is required</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cMessage">Message <span class="req">*</span></label>
+                                <textarea id="cMessage" rows="5" required placeholder="Tell me about your project, idea, or questions..."></textarea>
+                                <span class="error-msg" id="cMessageError">Message cannot be empty</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="contactSubmitBtn">
+                                <span>Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                        
+                        <div class="success-message" id="contactSuccess">
+                            <div class="success-icon">
+                                <i data-lucide="check-circle-2"></i>
+                            </div>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for getting in touch. I will get back to you within 24 hours.</p>
+                            <button class="btn btn-secondary" id="contactResetBtn">Send Another Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Abhindev Vijayan. Designed with pride.</p>
+            <p class="footer-pills">
+                <span>Code</span> &bull; <span>Strategy</span> &bull; <span>Governance</span>
+            </p>
+            <a href="#home" class="scroll-top" aria-label="Scroll back to top">
+                <i data-lucide="chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Portfolio Admin | System Workspace</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Admin specific visual overrides */
+        .admin-page-header {
+            padding: 60px 0 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            margin-bottom: 50px;
+            backdrop-filter: blur(12px);
+        }
+        .admin-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .admin-title-area h1 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+        .admin-title-area p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+        .admin-button-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .btn-success {
+            background: var(--gradient-gold);
+            color: #080c14;
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-success:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
+        }
+        .projects-grid.admin-workspace-grid .project-card-actions {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .admin-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-teal);
+        }
+        .admin-nav-btn:hover {
+            text-decoration: underline;
+        }
+        .notification-toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #10b981;
+            color: white;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 3000;
+        }
+        .notification-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .notification-toast.error {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Admin Workspace Header -->
+    <header class="admin-page-header">
+        <div class="container admin-header-flex">
+            <div class="admin-title-area">
+                <a href="index.html" class="admin-nav-btn">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Back to Portfolio Website</span>
+                </a>
+                <h1 style="margin-top: 10px;">AV Portfolio <span class="gradient-text">Admin Workspace</span></h1>
+                <p>Add, edit, or delete database projects permanently on the backend server filesystem.</p>
+            </div>
+            
+            <div class="admin-button-group">
+                <button class="btn btn-primary" id="adminAddProjectBtn">
+                    <i data-lucide="plus"></i>
+                    <span>Add Project</span>
+                </button>
+                <button class="btn btn-success" id="adminPublishBtn">
+                    <i data-lucide="save"></i>
+                    <span>Save & Publish changes</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Contents -->
+    <main>
+        <section style="padding: 0 0 100px;">
+            <div class="container">
+                <div class="section-header" style="text-align: left; margin-bottom: 40px;">
+                    <h2 class="section-title">Backend Projects Database</h2>
+                    <div class="section-divider" style="margin: 12px 0 0;"></div>
+                </div>
+                
+                <!-- Admin permanent grid -->
+                <div class="projects-grid admin-workspace-grid" id="adminProjectsGrid">
+                    <!-- Dynamic project rows loaded via admin.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Management Edit/Add Modal Form -->
+    <div class="modal-overlay" id="adminProjectModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="pModalTitle">Add Real Project</h3>
+                <button class="modal-close" id="closeAdminProjectModal" aria-label="Close modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <form id="adminProjectForm" novalidate>
+                <input type="hidden" id="pId">
+                <div class="form-group">
+                    <label for="pTitle">Project Title <span class="req">*</span></label>
+                    <input type="text" id="pTitle" required placeholder="e.g. LegisCode">
+                    <span class="error-msg" id="pTitleError">Title is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="pCategory">Category / Theme <span class="req">*</span></label>
+                    <select id="pCategory" required>
+                        <option value="" disabled selected>Select category...</option>
+                        <option value="Tech & Law">Tech & Law (Politics/Compliance)</option>
+                        <option value="Tech & Sports">Tech & Sports (Cricket/Analytics)</option>
+                        <option value="Full-Stack Dev">Full-Stack Development</option>
+                        <option value="System Design">System Design & Databases</option>
+                    </select>
+                    <span class="error-msg" id="pCategoryError">Category is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="pIcon">Accent Icon <span class="req">*</span></label>
+                    <select id="pIcon" required>
+                        <option value="" disabled selected>Select icon...</option>
+                        <option value="scale">Legal Scale</option>
+                        <option value="activity">Cricket/Activity</option>
+                        <option value="laptop">Laptop/Web</option>
+                        <option value="database">Database</option>
+                        <option value="vote">Vote/Politics</option>
+                    </select>
+                    <span class="error-msg" id="pIconError">Icon is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="pTags">Tech Stack Tags <span class="req">*</span> <small>(comma-separated)</small></label>
+                    <input type="text" id="pTags" required placeholder="e.g. React, Python, PostgreSQL">
+                    <span class="error-msg" id="pTagsError">At least one tag is required</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pSourceUrl">Source Code URL</label>
+                        <input type="url" id="pSourceUrl" placeholder="https://github.com/...">
+                    </div>
+                    <div class="form-group">
+                        <label for="pLiveUrl">Live Demo URL</label>
+                        <input type="url" id="pLiveUrl" placeholder="https://...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pDescription">Description <span class="req">*</span></label>
+                    <textarea id="pDescription" rows="3" required placeholder="Describe what the project does..."></textarea>
+                    <span class="error-msg" id="pDescriptionError">Description is required</span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span id="pSubmitText">Save to Memory</span>
+                    <i data-lucide="check"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast Messages -->
+    <div class="notification-toast" id="notificationToast">
+        <i data-lucide="check-circle"></i>
+        <span id="toastMsg">Changes Saved Successfully!</span>
+    </div>
+
+    <!-- Admin Logic Script -->
+    <script src="admin.js"></script>
+</body>
+</html>

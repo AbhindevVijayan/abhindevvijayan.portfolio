@@ -392,11 +392,39 @@
                     Resume
                 </button>
             </a>
-            <button class="md:hidden text-on-surface-variant hover:text-secondary-fixed">
+            <button id="menu-btn" class="md:hidden text-on-surface-variant hover:text-secondary-fixed">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
     </nav>
+    <div id="mobile-menu"
+        class="hidden md:hidden fixed top-16 left-0 w-full bg-surface/95 backdrop-blur-md border-b border-outline-variant/10 z-40">
+
+        <div class="flex flex-col p-4 gap-4">
+
+            <a href="#home" class="text-on-surface-variant hover:text-secondary-fixed">
+                Home
+            </a>
+
+            <a href="#projects" class="text-on-surface-variant hover:text-secondary-fixed">
+                Projects
+            </a>
+
+            <a href="#skills" class="text-on-surface-variant hover:text-secondary-fixed">
+                Skills
+            </a>
+
+            <a href="#contact" class="text-on-surface-variant hover:text-secondary-fixed">
+                Contact
+            </a>
+
+            <a href="https://github.com/AbhindevVijayan/Resume/blob/main/Abhindev_Vijayan_Resume%20(1).pdf"
+                target="_blank" class="text-secondary-fixed">
+                Resume
+            </a>
+
+        </div>
+    </div>
     <main class="pt-24 pb-section-gap">
         <!-- Hero Section -->
         <section
@@ -653,6 +681,7 @@
         <!-- Contact Section -->
         <section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto mb-section-gap scroll-animate"
             id="contact">
+
             <div
                 class="glass-panel rounded-xl p-8 md:p-12 border-t-2 border-t-primary relative overflow-hidden cyber-glow-hover">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[60px] -z-10 animate-pulse">
@@ -705,6 +734,10 @@
             class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-8">
             <div class="font-code-md text-code-md text-secondary-fixed text-center md:text-left">
                 © 2026 Abhindev Vijayan. Built for performance. Lets connect
+                <br>
+                <a href="mailto:abhindevvijayan18@gmail.com" class="hover:text-primary transition-colors">
+                    abhindevvijayan18@gmail.com
+                </a>
             </div>
             <div class="flex gap-6">
                 <a class="text-on-surface-variant hover:text-primary transition-colors"
@@ -764,6 +797,18 @@
                 });
             });
         });
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });                  
     </script>
 </body>
 

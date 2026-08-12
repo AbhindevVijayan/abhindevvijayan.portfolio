@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Abhindev Vijayan - Full Stack Developer</title>
+    <title>Abhindev Vijayan - Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -41,6 +41,65 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-shell {
+            background: rgba(19, 19, 19, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+        }
+
+        .nav-link {
+            position: relative;
+            color: rgba(229, 226, 225, 0.78);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #cdf200;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0.5rem;
+            right: 0.5rem;
+            bottom: -0.35rem;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(205, 242, 0, 0), rgba(205, 242, 0, 1), rgba(205, 242, 0, 0));
+            opacity: 0;
+            transform: scaleX(0.7);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .menu-toggle .bar {
+            display: block;
+            width: 20px;
+            height: 2px;
+            border-radius: 999px;
+            background: currentColor;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        .menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
         }
 
         .cyber-glow-hover {
@@ -370,58 +429,67 @@
 <body
     class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-secondary-fixed selection:text-on-secondary-fixed">
     <!-- TopNavBar -->
-    <nav
-        class="bg-surface/60 dark:bg-surface/60 backdrop-blur-md text-primary dark:text-primary font-body-md text-body-md fixed top-0 w-full z-50 border-b border-outline-variant/10 transition-all duration-300 ease-in-out">
-        <div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-16">
-            <div class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-on-surface">Abhindev
-                Vijayan</div>
-            <div class="hidden md:flex gap-8 items-center">
-                <a class="text-secondary-fixed font-bold border-b-2 border-secondary-fixed pb-1 hover:backdrop-blur-xl hover:bg-surface-bright/20 transition-all duration-300 ease-in-out font-body-md"
-                    href="#home">Home</a>
-                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed transition-colors hover:backdrop-blur-xl hover:bg-surface-bright/20 transition-all duration-300 ease-in-out font-body-md"
-                    href="#projects">Projects</a>
-                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed transition-colors hover:backdrop-blur-xl hover:bg-surface-bright/20 transition-all duration-300 ease-in-out font-body-md"
-                    href="#skills">Skills</a>
-                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed transition-colors hover:backdrop-blur-xl hover:bg-surface-bright/20 transition-all duration-300 ease-in-out font-body-md"
-                    href="#contact">Contact</a>
-            </div>
-            <a href="https://drive.google.com/file/d/1VGZnWNaHb4rLRLadpMwxJ4_SK_7GV1Lt/view" target="_blank">
-                <button
-                    class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary font-code-md text-code-md rounded hover:bg-primary-fixed transition-colors duration-500 hover:scale-105 active:scale-95">
-                    Resume
-                </button>
+    <nav class="fixed top-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-5xl -translate-x-1/2">
+        <div class="nav-shell flex items-center justify-between gap-4 rounded-full px-4 py-3 md:px-6 md:py-3.5">
+            <a href="#home" class="flex items-center gap-3 shrink-0 group" aria-label="Abhindev Vijayan home">
+                <span
+                    class="flex h-9 w-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-sm font-bold text-primary shadow-[0_0_18px_rgba(192,193,255,0.25)]">
+                    AV
+                </span>
+                <span class="font-headline-sm text-base md:text-lg font-bold tracking-tight text-on-surface">
+                    Abhindev Vijayan
+                </span>
             </a>
-            <button id="menu-btn" class="md:hidden text-on-surface-variant hover:text-secondary-fixed">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+
+            <div class="hidden items-center gap-2 rounded-full border border-white/5 bg-white/3 px-2 py-1.5 md:flex">
+                <a class="nav-link active rounded-full px-3 py-2 text-sm" href="#home">Home</a>
+                <a class="nav-link rounded-full px-3 py-2 text-sm" href="#projects">Projects</a>
+                <a class="nav-link rounded-full px-3 py-2 text-sm" href="#skills">Skills</a>
+                <a class="nav-link rounded-full px-3 py-2 text-sm" href="#contact">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="https://drive.google.com/file/d/1VGZnWNaHb4rLRLadpMwxJ4_SK_7GV1Lt/view" target="_blank"
+                    class="hidden md:inline-flex items-center justify-center rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-on-primary transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_18px_rgba(192,193,255,0.35)]">
+                    Resume
+                </a>
+
+                <button id="menu-btn" type="button"
+                    class="menu-toggle md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-on-surface-variant transition-colors hover:text-secondary-fixed"
+                    aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="flex flex-col items-center gap-1.5">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </nav>
+
     <div id="mobile-menu"
-        class="hidden md:hidden fixed top-16 left-0 w-full bg-surface/95 backdrop-blur-md border-b border-outline-variant/10 z-40">
-
-        <div class="flex flex-col p-4 gap-4">
-
-            <a href="#home" class="text-on-surface-variant hover:text-secondary-fixed">
+        class="fixed left-1/2 top-[5.15rem] z-40 hidden w-[calc(100%-1.5rem)] max-w-xl -translate-x-1/2 rounded-2xl border border-white/10 bg-surface/95 shadow-[0_24px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl md:hidden">
+        <div class="flex flex-col p-3">
+            <a href="#home"
+                class="rounded-xl px-3 py-3 text-sm font-medium text-on-surface-variant transition-colors hover:bg-white/5 hover:text-secondary-fixed">
                 Home
             </a>
-
-            <a href="#projects" class="text-on-surface-variant hover:text-secondary-fixed">
+            <a href="#projects"
+                class="rounded-xl px-3 py-3 text-sm font-medium text-on-surface-variant transition-colors hover:bg-white/5 hover:text-secondary-fixed">
                 Projects
             </a>
-
-            <a href="#skills" class="text-on-surface-variant hover:text-secondary-fixed">
+            <a href="#skills"
+                class="rounded-xl px-3 py-3 text-sm font-medium text-on-surface-variant transition-colors hover:bg-white/5 hover:text-secondary-fixed">
                 Skills
             </a>
-
-            <a href="#contact" class="text-on-surface-variant hover:text-secondary-fixed">
+            <a href="#contact"
+                class="rounded-xl px-3 py-3 text-sm font-medium text-on-surface-variant transition-colors hover:bg-white/5 hover:text-secondary-fixed">
                 Contact
             </a>
-
             <a href="https://drive.google.com/file/d/1VGZnWNaHb4rLRLadpMwxJ4_SK_7GV1Lt/view?usp=sharing" target="_blank"
-                class="text-secondary-fixed">
+                class="mt-2 rounded-xl bg-primary px-3 py-3 text-center text-sm font-semibold text-on-primary">
                 Resume
             </a>
-
         </div>
     </div>
     <main class="pt-24 pb-section-gap">
@@ -811,15 +879,44 @@
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                if (menuBtn) {
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                }
             });
-        });                  
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section[id]');
+
+        const setActiveNav = () => {
+            let currentSection = 'home';
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 140 && rect.bottom >= 140) {
+                    currentSection = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === `#${currentSection}`;
+                link.classList.toggle('active', isActive);
+            });
+        };
+
+        window.addEventListener('scroll', setActiveNav, { passive: true });
+        setActiveNav();
     </script>
 </body>
 

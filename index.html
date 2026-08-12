@@ -540,21 +540,32 @@
                     style="transition-delay: 500ms;">
                     <div class="absolute w-64 h-64 bg-primary/20 rounded-full blur-[80px] -z-10 animate-pulse"></div>
                     <div
-                        class="glass-panel p-6 rounded-xl border border-outline-variant/30 w-full max-w-md animate-float relative overflow-hidden group hover:border-primary/50 transition-colors duration-500">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-fixed to-primary">
+                        class="grid gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(340px,1fr)] items-center w-full max-w-4xl">
+                        <div
+                            class="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/15 to-transparent opacity-80">
+                            </div>
+                            <img src="image.jpg" alt="Abhindev Vijayan"
+                                class="relative w-full h-[420px] object-cover" />
                         </div>
-                        <div class="flex items-center gap-2 mb-4 text-on-surface-variant font-code-md text-code-md">
-                            <span class="w-3 h-3 rounded-full bg-error"></span>
-                            <span class="w-3 h-3 rounded-full bg-secondary-fixed"></span>
-                            <span class="w-3 h-3 rounded-full bg-primary"></span>
-                            <span class="ml-2 opacity-50">dev_environment.sh</span>
-                        </div>
-                        <pre class="font-code-md text-code-md text-on-surface-variant overflow-x-auto"><code id="terminal-code"><span class="text-primary">const</span> <span class="text-secondary-fixed">developer</span> = {
+                        <div
+                            class="glass-panel p-6 rounded-xl border border-outline-variant/30 w-full animate-float relative overflow-hidden group hover:border-primary/50 transition-colors duration-500">
+                            <div
+                                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-fixed to-primary">
+                            </div>
+                            <div class="flex items-center gap-2 mb-4 text-on-surface-variant font-code-md text-code-md">
+                                <span class="w-3 h-3 rounded-full bg-error"></span>
+                                <span class="w-3 h-3 rounded-full bg-secondary-fixed"></span>
+                                <span class="w-3 h-3 rounded-full bg-primary"></span>
+                                <span class="ml-2 opacity-50">dev_environment.sh</span>
+                            </div>
+                            <pre class="font-code-md text-code-md text-on-surface-variant overflow-x-auto"><code id="terminal-code"><span class="text-primary">const</span> <span class="text-secondary-fixed">developer</span> = {
   name: <span class="text-tertiary">"Abhindev Vijayan"</span>,
   role: <span class="text-tertiary">"Full Stack Eng",</span>,
   focus: [<span class="text-tertiary">"Backend"</span>, <span class="text-tertiary">"AI"</span>],
   status: <span class="text-secondary-fixed">"Building..."</span>
 };</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
